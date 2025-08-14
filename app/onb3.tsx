@@ -26,8 +26,8 @@ export default function Onboarding3Screen() {
   const handleGetStarted = () => {
     console.log('Онбординг завершен');
     Alert.alert('Добро пожаловать!', 'Онбординг завершен. Переход в приложение...');
-    // Здесь можно добавить переход на главный экран приложения
-    // router.replace('/main');
+    // Переход на главный экран приложения
+    router.replace('/main');
   };
 
   const handleSkip = () => {

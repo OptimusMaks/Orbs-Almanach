@@ -11,6 +11,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen name="onb2" options={{ headerShown: false }} />
           <Stack.Screen name="onb3" options={{ headerShown: false }} />
+          <Stack.Screen name="main" options={{ headerShown: false }} />
         </Stack>
         <StatusBar style="auto" />
       </SafeAreaProvider>
