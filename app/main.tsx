@@ -8,11 +8,12 @@ import {
   Dimensions,
   ScrollView,
   Text,
-  Animated
+  Animated,
+  StatusBar
 } from 'react-native';
 import { useRouter } from 'expo-router';
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('screen');
 
 // Типы для шариков
 interface BallData {
@@ -174,7 +175,7 @@ export default function MainScreen() {
   };
 
   const handleExplorePress = () => {
-    console.log('Исследовать');
+    router.push('./explore');
   };
 
   const handleSettingsPress = () => {
@@ -261,6 +262,7 @@ export default function MainScreen() {
 
   return (
     <View style={styles.container}>
+      <StatusBar hidden={true} />
       <ImageBackground
         source={require('../assets/main1/main1-back.png')}
         style={styles.backgroundImage}
@@ -398,7 +400,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    paddingTop: '25%',
+    paddingTop: 40,
     paddingHorizontal: 10,
     marginLeft: 0,
   },
