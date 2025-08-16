@@ -14,6 +14,7 @@ export default function RootLayout() {
           <Stack.Screen name="main" options={{ headerShown: false }} />
           <Stack.Screen name="explore" options={{ headerShown: false }} />
           <Stack.Screen name="almanah" options={{ headerShown: false }} />
+          <Stack.Screen name="our-mission" options={{ headerShown: false }} />
         </Stack>
         <StatusBar style="light" hidden={true} />
       </SafeAreaProvider>

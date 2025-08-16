@@ -10,6 +10,8 @@ import {
   StatusBar
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import LottieView from 'lottie-react-native';
+import animationData from '../assets/explore/Image Playground Animation.json';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -25,7 +27,7 @@ export default function ExploreScreen() {
   };
 
   const handleHowWorksPress = () => {
-    console.log('How it works pressed');
+    router.push('./our-mission');
   };
 
   return (
@@ -54,6 +56,16 @@ export default function ExploreScreen() {
             </TouchableOpacity>
           </View>
 
+          {/* Lottie анимация */}
+          <View style={styles.lottieSection}>
+            <LottieView
+              source={animationData}
+              style={styles.lottieAnimation}
+              autoPlay
+              loop
+              resizeMode="contain"
+            />
+          </View>
 
           {/* Нижние кнопки */}
           <View style={styles.bottomButtonsSection}>
@@ -125,10 +137,29 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
 
+  // Lottie анимация
+  lottieSection: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 20,
+    height: 200,
+    width: 200,
+    alignSelf: 'center',
+  },
+  lottieAnimation: {
+    width: 200,
+    height: 200,
+    maxWidth: 200,
+    maxHeight: 200,
+    minWidth: 200,
+    minHeight: 200,
+    flex: 0,
+  },
+
   // Нижние кнопки
   bottomButtonsSection: {
     alignItems: 'center',
-    paddingBottom: 40,
+    paddingBottom: 20,
   },
   howWorksButtonContainer: {
     marginBottom: 15,
